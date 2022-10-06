@@ -25,6 +25,12 @@ app.get('/staff/:firstName', (req,res) => {
   res.send(result[0]).status(204);
 });
 
+app.post('/staff', (req, res) => {
+  const payload = req.body;
+  staff.push(payload);
+  res.status(204).end();
+});
+
 app.listen(PORT, () => {
   console.log(`app is listening @ http://localhost:${4000}`);
 });
