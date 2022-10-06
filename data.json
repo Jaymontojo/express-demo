@@ -1,0 +1,19 @@
+{
+  "faculty": [
+    {
+      "first_name": "Jay",
+      "last_name": "Montojo",
+      "department": "Instruction"
+    },
+    {
+      "first_name": "Garrett",
+      "last_name": "Omi",
+      "department": "Delivery"
+    },
+    {
+      "first_name": "Yunn",
+      "last_name": "Takeguchi",
+      "department": "Finance"
+    }
+  ]
+}
