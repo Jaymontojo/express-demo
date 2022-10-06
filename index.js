@@ -16,11 +16,14 @@ app.get('/staff', (req, res) => {
   res.send(staff).status(200);
 });
 
-app.get('/staff/:name/department/:department', (req,res) => {
+app.get('/staff/:firstName', (req,res) => {
   console.log(req.params); //route params
-  res.sendStatus(204).end();
+  const { firstName } = req.params;
+  const result = staff.filter((staffMember) => {
+    return staffMember.first_name === firstName
+  })
+  res.send(result[0]).status(204);
 });
-
 
 app.listen(PORT, () => {
   console.log(`app is listening @ http://localhost:${4000}`);
